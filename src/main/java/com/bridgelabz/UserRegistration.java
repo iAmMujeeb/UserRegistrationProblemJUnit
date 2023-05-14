@@ -53,9 +53,9 @@ public class UserRegistration {
             entryPassword = 1;
         else
             entryPassword = 0;
-        if (((entryFN==entryLN)&&(entryemailId==entryPhNum))&&(entryPassword == 1)){
+        if (((entryFN == entryLN) && (entryemailId == entryPhNum)) && (entryPassword == 1)) {
             return 1;
-        }else
+        } else
             return 0;
     }
 }
