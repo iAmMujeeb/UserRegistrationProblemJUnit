@@ -12,6 +12,18 @@ public class UserRegistration {
         return matcher.matches();
     }
 
+    public int validateEmailId(String emailId) {
+        int entryemailId = 0;
+        Pattern pattern = Pattern.compile("^abc([.+-]?[0-9]{3})*[@][a-zA-Z0-9]{1,8}.[a-z]{3}.*([a-z]{2,3})*$");
+        Matcher matcher = pattern.matcher(emailId);
+        if (matcher.matches()) {
+            entryemailId = 1;
+        } else {
+            entryemailId = 0;
+        }
+        return entryemailId;
+    }
+
     public int validateUser(String firstName, String lastName, String emailId, String phNum, String password) {
         int entryFN = 0;
         int entryLN = 0;
